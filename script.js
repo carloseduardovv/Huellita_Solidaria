@@ -1,4 +1,3 @@
-// HUELLITA SOLIDARIA 🐾 - script.js
 document.addEventListener('DOMContentLoaded', () => {
   console.log("💚 Bienvenido a Huellita Solidaria");
 
@@ -10,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     apoyos++;
     localStorage.setItem('apoyos', apoyos);
     cartCount.textContent = `(${apoyos})`;
-    alert(`🐾 ¡Gracias por apoyar la campaña "${nombre}"!`);
+    alert(`¡Gracias por apoyar la campaña "${nombre}"!`);
   }
 
   const subscribeBtn = document.getElementById('subscribe-btn');
@@ -19,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   subscribeBtn?.addEventListener('click', () => {
     const email = emailInput.value.trim();
     if (!email) {
-      alert("Por favor ingresa un correo electrónico 📨");
+      alert("Por favor ingresa un correo electrónico");
       return;
     }
     let lista = JSON.parse(localStorage.getItem('suscriptores')) || [];
@@ -39,9 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (logged) {
       logged = false;
       localStorage.setItem('logged', false);
-      alert("Has cerrado sesión 💤");
+      alert("Has cerrado sesión");
     } else {
-      const usuario = prompt("Ingresa tu nombre para iniciar sesión 🐕");
+      const usuario = prompt("Ingresa tu nombre para iniciar sesión");
       if (usuario) {
         logged = true;
         localStorage.setItem('logged', true);
@@ -57,3 +56,4 @@ document.addEventListener('DOMContentLoaded', () => {
     authText.textContent = logged ? usuario || 'Voluntario' : 'Mi cuenta';
   }
 });
+
