@@ -1,0 +1,553 @@
+/* PALETA DE COLORES FINAL */
+/* Primario: Blanco (#fff) / Fondo Claro (#f8f8f8) */
+/* Aceto: Naranja (#FF8C00) */
+/* Texto: Gris Oscuro (#333) / Gris Secundario (#555) */
+
+
+/* ===== RESET GENERAL Y TIPOGRAFÍA ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Mantiene el scroll suave con los enlaces de ancla */
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.8em;
+    margin-bottom: 0.8em;
+    color: #333;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+    color: #555;
+}
+
+a {
+    text-decoration: none;
+    color: #FF8C00;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #FFA500;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ===== HEADER Y NAVBAR FIJA ===== */
+.header {
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    flex-wrap: nowrap; 
+}
+
+.customer-support i, .container-logo i, .container-user i {
+    font-size: 2em;
+    color: #FF8C00; /* Iconos principales naranjas */
+    margin-right: 10px;
+}
+.logo a {
+    color: #333;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+/* Donaciones */
+.donaciones a {
+    display: flex;
+    align-items: center;
+    color: #FF8C00;
+    font-weight: 600;
+    margin-left: 15px;
+}
+.donaciones a i {
+    font-size: 1.5em;
+    margin-right: 5px;
+}
+
+.navbar {
+    padding: 8px 20px;      /* antes seguro era 20px o más */
+    height: 55px;           /* puedes bajar a 50 o 45 px */
+}
+
+.navbar .logo img {
+    height: 35px;           /* reduce el tamaño del logo */
+}
+
+.navbar .menu a {
+    font-size: 15px;        /* texto un poco más pequeño */
+    padding: 8px 14px;
+}
+
+
+
+/* NAVBAR */
+.container-navbar {
+    background-color: #333; /* Barra de navegación oscura para contraste */
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.navbar ul.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    position: static;
+    width: auto;
+}
+.navbar ul.menu li a {
+    color: #fff;
+    font-weight: 600;
+    padding: 5px 0;
+    transition: border-bottom 0.3s;
+}
+.navbar ul.menu li a:hover {
+    border-bottom: 2px solid #FF8C00;
+}
+
+.menu-toggle {
+    display: none;
+}
+.search-form input {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #777; 
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    outline: none;
+    width: 200px;
+}
+.btn-search {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2em;
+    margin-left: -35px;
+}
+
+
+/* ===== SECCIONES GENERALES ===== */
+.section {
+    padding: 80px 20px;
+    min-height: 80vh; 
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex; /* Mantener la visualización de todas las secciones */
+}
+.btn {
+    background-color: #FF8C00;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+    display: inline-block;
+}
+.btn:hover {
+    background-color: #FFA500;
+}
+
+/* --- SECCIÓN INICIO/BANNER --- */
+.banner-hero {
+    background-color: #fff;
+    padding: 50px 20px;
+    min-height: 60vh;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 40px;
+}
+.content-banner {
+    width: 40%;
+    text-align: left;
+}
+.slider-container {
+    width: 50%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.slider-container .slider-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- SOBRE NOSOTROS --- */
+.sobre-nosotros { background-color: #f8f8f8; }
+.card-feature {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    width: 280px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-top: 5px solid #FF8C00;
+    transition: transform 0.3s ease;
+}
+.card-feature:hover {
+    transform: translateY(-5px);
+}
+
+.card-feature i { 
+    font-size: 3em; 
+    color: #FF8C00; 
+    margin-bottom: 20px;
+}
+
+.card-feature {
+    display: flex;
+    align-items: center;
+    gap: 15px;        /* separa icono y texto */
+    flex-direction: row;  /* asegura que estén lado a lado */
+}
+.card-feature i {
+    font-size: 45px;  /* tamaño del ícono */
+}
+
+.customer-support {
+    display: flex;
+    align-items: center;      /* Centra verticalmente */
+    gap: 10px;                /* Espacio entre el ícono y el texto */
+}
+
+.customer-support i {
+    font-size: 1.8rem;
+    color: #e67e22;           /* Tu color naranja */
+}
+
+.content-customer-support {
+    display: flex;
+    flex-direction: column;   /* Texto arriba y número abajo */
+    line-height: 1.2;
+}
+
+
+.container-features {
+    display: flex;
+    justify-content: center; 
+    align-items: stretch;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;   /* Para que no se descuadre en celulares */
+}
+
+.card-feature {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;           /* Tamaño uniforme */
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+/* --- PRÓXIMAS CAMPAÑAS (Mejorado) --- */
+.campanas { background-color: #fff; }
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+.campaign-item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    border-top: 5px solid #FF8C00;
+}
+.campaign-item h3 {
+    color: #333;
+    padding: 15px 10px 5px;
+}
+.campaign-item p {
+    color: #777;
+    margin-bottom: 10px;
+}
+.campaign-item img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+.btn-campaign {
+    display: block;
+    width: 80%;
+    margin: 0 auto 20px;
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+/* Contenedor de campañas en fila */
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap; /* Para que no se rompa en celular */
+    margin-top: 25px;
+}
+
+/* Estilo de cada cuadro de campaña */
+.campaign-item {
+    background: #ffffff;
+    border-radius: 12px;
+    width: 280px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Imagen dentro de los cuadros */
+.campaign-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* --- CONTÁCTANOS (Mejorado con Logos) --- */
+.contactanos { background-color: #f8f8f8; }
+.social-links-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+.social-card {
+    background-color: #fff;
+    color: #333;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+.social-card:hover {
+    transform: translateY(-5px);
+}
+.logo-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    color: #fff;
+}
+.instagram-card .logo-box {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #405ede 90%);
+}
+.whatsapp-card .logo-box {
+    background-color: #25D366;
+}
+.social-card h3 {
+    color: #333;
+    font-size: 1.3em;
+}
+.social-card p {
+    font-size: 0.9em;
+    color: #777;
+}
+
+
+/* --- DONACIONES FRAME (Fondo claro y centrado) --- */
+.donaciones-frame {
+    padding-top: 100px;
+    min-height: 90vh;
+    background-color: #fff;
+}
+.donation-content {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.donation-image {
+    max-width: 80%;
+    height: auto;
+    margin: 20px auto;
+    border: 5px solid #FF8C00;
+    border-radius: 10px;
+}
+.account-number {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #555;
+    margin-top: 15px;
+}
+
+
+/* ===== FOOTER (Diseño Limpio y Profesional) ===== */
+.footer {
+    background-color: #fff; /* Fondo blanco */
+    color: #555;
+    padding: 50px 20px 20px;
+    border-top: 1px solid #eee;
+}
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+.title-footer {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #333; /* Títulos oscuros */
+    margin-bottom: 20px;
+}
+.footer-col ul {
+    list-style: none;
+}
+.footer-col ul li {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    display: flex;
+    align-items: center;
+}
+.footer-col ul li i {
+    color: #FF8C00;
+    margin-right: 10px;
+    width: 15px;
+    text-align: center;
+}
+.footer-col ul li a {
+    color: #555;
+}
+.footer-col ul li a:hover {
+    color: #FF8C00;
+}
+.social-icons a {
+    font-size: 1.8em;
+    margin-right: 15px;
+    color: #777;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: #FF8C00;
+}
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #777;
+}
+
+
+/* ===== RESPONSIVIDAD ===== */
+@media (max-width: 768px) {
+    /* (Mantenemos la lógica móvil de colapsar la cabecera y el footer) */
+    .hero {
+        flex-direction: column; 
+        text-align: center;
+        gap: 15px;
+    }
+    .customer-support { display: none; }
+    .footer-col {
+        min-width: 100%;
+    }
+    .social-links-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .social-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Mostrar menú hamburguesa en móvil */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 25px;
+        color: #fff;
+    }
+    .navbar ul.menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #444;
+        z-index: 999;
+    }
+    .navbar ul.menu.active {
+        display: flex;
+    }
+    .search-form {
+        display: none;
+    }
+    .banner-hero {
+        flex-direction: column;
+    }
+    .content-banner, .slider-container {
+        width: 100%;
+    }
+    .card-feature, .campaign-item {
+        width: 100%;
+    }
+}
